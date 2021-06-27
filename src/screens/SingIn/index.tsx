@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
-import { Container, Title, Input, ImageHome } from './styles';
+import {
+  Container,
+  Title,
+  Input,
+  ImageHome,
+  Content,
+  SubTitle,
+} from './styles';
 
 const SingIn: React.FC = () => {
   const [text, setText] = useState('');
@@ -7,16 +14,24 @@ const SingIn: React.FC = () => {
   return (
     <Container>
       <ImageHome />
+      <Content>
+        <Title>
+          Organize {`\n`}
+          seus jogatinas {`\n`}
+          facilmente
+        </Title>
 
-      <Title>
-        Daniel Gomes Jeronimo Leite
-      </Title>
+        <SubTitle>
+          Crie grupos para jogar seus games {`\n`}
+          favoritos com seus amigos
+        </SubTitle>
+      </Content>
 
-      <Input
+      {/* <Input
         value={text}
         onChangeText={setText}
         placeholder="Digite algo"
-      />
+      /> */}
     </Container>
   );
 }
